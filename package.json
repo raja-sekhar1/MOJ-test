@@ -1,0 +1,21 @@
+{
+  "name": "moj-tests",
+  "version": "1.0.0",
+  "private": true,
+  "description": "saucedemo ui tests + petstore api tests",
+  "scripts": {
+    "test": "npm run test:ui && npm run test:api",
+    "test:ui": "playwright test --config=ui/playwright.config.ts",
+    "test:ui:headed": "playwright test --config=ui/playwright.config.ts --headed",
+    "test:ui:ui": "playwright test --config=ui/playwright.config.ts --ui",
+    "test:ui:chromium": "playwright test --config=ui/playwright.config.ts --project=chromium",
+    "test:api": "playwright test --config=api/playwright.config.ts",
+    "report:ui": "playwright show-report ui/playwright-report",
+    "report:api": "playwright show-report api/playwright-report"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.55.0",
+    "@types/node": "^24.3.0",
+    "typescript": "^5.9.2"
+  }
+}
